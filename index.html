@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cờ caro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Main Menu -->
+        <div id="menu-container">
+            <h1 class="menu-title">Cờ Caro</h1>
+            <button id="play-with-friend" class="menu-button">Chơi với bạn</button>
+            <button id="play-with-bot" class="menu-button">Chơi với máy</button>
+            <button id="how-to-play" class="menu-button">Hướng dẫn</button>
+            <button id="quit-game" class="menu-button">Thoát</button>
+        </div>
+
+        <!-- How to Play Section -->
+        <div id="how-to-play-container">
+            <h2 class="how-to-play-title">Hướng dẫn chơi</h2>
+            <div class="rules-container">
+                <p><strong>Cờ Caro</strong> là một trò chơi chiến thuật được chơi trên một bàn cờ.</p>
+                <h3>Luật chơi:</h3>
+                <ul>
+                    <li>Trò chơi diễn ra trên bàn cờ có thể thay đổi kích thước (10x10, 12x12, 16x16, 20x20).</li>
+                    <li>Hai người chơi lần lượt đánh dấu X hoặc O vào các ô trên bàn cờ.</li>
+                    <li>Người chơi đầu tiên đạt được 5 quân cờ liên tiếp theo hàng ngang, dọc hoặc chéo sẽ chiến thắng.</li>
+                    <li>Trong chế độ chơi với máy, bạn sẽ đánh X và máy tính sẽ đánh O.</li>
+                </ul>
+                <h3>Điều khiển:</h3>
+                <ul>
+                    <li><strong>Đổi kích thước bàn cờ:</strong> Nhấn vào nút kích thước (10x10, 12x12, etc.)</li>
+                    <li><strong>Khởi động lại:</strong> Nhấn nút tải lại (⟳)</li>
+                    <li><strong>Chế độ chơi:</strong> Nhấn nút chuyển đổi để chơi với máy (💻) hoặc bạn (👷)</li>
+                    <li><strong>Quay lại menu:</strong> Nhấn nút Menu</li>
+                </ul>
+            </div>
+            <button id="back-to-menu" class="back-button">Quay lại Menu</button>
+        </div>
+
+        <!-- Game Section -->
+        <div id="game-container">
+            <div class="app-container">
+                <h2 class="title">Cờ Caro</h2>
+            </div>
+
+            <div class="board">
+                <div class="status" id="status"></div>
+                <div class="list-button">
+                    <button class="button" id="restart-btn">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                    <button class="button" id="single-player-toggle">👷</button>
+                    <button class="button" id="dimension-button">10x10</button>
+                    <button class="button" id="menu-button">Menu</button>
+                </div>
+            </div>
+            <div id="board" class="game"></div>
+        </div>
+
+        <!-- Game Over Popup -->
+        <div id="game-over-container">
+            <div class="game-over-popup">
+                <h2 class="game-over-title">Trò chơi kết thúc!</h2>
+                <span id="winning-icon" class="winning-icon">🏆</span>
+                <div id="winner-message" class="winner-message">Người chơi X đã thắng!</div>
+                <div class="game-over-buttons">
+                    <button id="play-again" class="game-over-button play-again-btn">Chơi lại</button>
+                    <button id="back-to-menu-from-game-over" class="game-over-button back-to-menu-btn">Về Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript files -->
+    <script src="main.js"></script>
+    <script src="computerPlayer.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
